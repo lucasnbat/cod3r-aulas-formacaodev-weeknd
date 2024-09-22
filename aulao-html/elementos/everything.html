@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta-dados para aplicação -->
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Título da página</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <h1>Título de primeira ordem</h1>
+    <h2>Título de segunda ordem</h2>
+    <h3>Título de teceira ordem</h3>
+    <p>Independente da renderização, a lógica é o grau de importância</p>
+
+    <form action="#" style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 400px;">
+        <fieldset>
+
+            <div>
+                <input type="text" placeholder="Tag auto-fechada" size="50" required name="nome-usuario" />
+            </div>
+
+            <div>
+                <input type="text" placeholder="Lograudoro" size="50" required name="logradouro" />
+            </div>
+
+            <div>
+                <input type="date" size="50" required />
+            </div>
+
+            <div>
+                <label for="dia-semana">Opções de sorvete</label>
+                <select id="dia-semana">
+                    <option value="1">Domingo</option>
+                    <option value="2">Segunda</option>
+                    <option value="3">Terça</option>
+                </select>
+            </div>
+
+            <div>
+                <textarea></textarea>
+            </div>
+            <button>Enviar</button>
+        </fieldset>
+    </form>
+    <div>
+        <h3>Links úteis</h3>
+        <ul>
+            <li><a href="everything.html">Home</a></li>
+            <li><a target="_blank" href="about.html">About</a></li>
+        </ul>
+    </div>
+    <form action="https://google.com/search" style="margin-bottom: 2rem;">
+        <p>Pesquisa no google</p>
+        <input type="search" name="q" />
+        <select name="hl">
+            <option value="pt">Português</option>
+            <option value="en">Ingles</option>
+        </select>
+        <button>Enviar</button>
+    </form>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jNQXAC9IVRw?si=tP33VUiAS-IIkl7P"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</body>
+
+</html>
