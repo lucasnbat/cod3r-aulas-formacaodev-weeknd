@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <div className="flex gap-2 flex-col">
       <Pagina>
-        <div>
-          <h1>Contéudo digitado em app/page.tsx</h1>
+        <div className="flex">
+          <h1>Bem vindo!</h1>
         </div>
       </Pagina>
     </div>
