@@ -19,3 +19,28 @@
 ![alt text](image.png)
 - o `layout.tsx` contém um layout particular para os arquivos da rota 
   `app/layout/` 
+  - se você coloca um `new Date()` no `layout.tsx`, você verá que essa
+    data não muda se você trafegar entre as rotas da pasta `app/layout/`;
+  - se você mudar para outra rota/conjunto de pastas, aí você faz o horário
+    mudar;
+- tem o `template.tsx` também, o qual atualiza o `new Date()` mesmo se trocar
+  entre as páginas apenas da rota `app/layout/`
+- quando você usa ambos, o `layout.tsx` é mais geral, envolvendo o `template.tsx`
+- componentes que rodam do lado do servidor (server components) podem acessar
+  banco de dados com querys;
+- configurações para busca de iamgens:
+```vim
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: 'plus.unsplash.com' }
+    ]
+  }
+}
+
+export default nextConfig;
+```
+- Se precisar de buscar de outros lugares, pode colocar `hostname: **`
+- 
