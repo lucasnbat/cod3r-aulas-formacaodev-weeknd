@@ -11,7 +11,9 @@ export default function Pagina404() {
         Você parece ter se perdido... tente voltar para a tela inicial!
       </p>
 
-      <a href="/" className="bg-blue-500 py-2 px-4 rounded-md">Voltar</a>
+      <a href="/" className="bg-blue-500 py-2 px-4 rounded-md">
+        Voltar
+      </a>
     </div>
   );
 }
