@@ -43,4 +43,12 @@ const nextConfig = {
 export default nextConfig;
 ```
 - Se precisar de buscar de outros lugares, pode colocar `hostname: **`
-- 
+- quando você coloca parênteses no nome da pagina, ela **não** é traduzida em
+  rota;
+  - `(produtos)/celulares/` = "produtos" não vai virar rota, você vai acessar
+    usando localhost:3000/celulares;
+- aparentemente o padrão de nomenclatura para arquivos que tem os skeletons de
+  carregamento é `loading.tsx`, eles que vão carregar os skeeltons;
+- Dizemos que os arquivos da pasta `app/(paginas)/produtos/` são componentes do
+  lado do server porque estão usando services (pasta `data/services/`) que são
+  funções server side;
