@@ -52,3 +52,12 @@ export default nextConfig;
 - Dizemos que os arquivos da pasta `app/(paginas)/produtos/` são componentes do
   lado do server porque estão usando services (pasta `data/services/`) que são
   funções server side;
+- em `/produto/ProdutoDetalhes.tsx` usamos isso:
+```vim
+      <div className="w-96 h-56 relative">
+        <Image src={produto.imagemUrl} alt={produto.nome} fill />
+      </div>
+```
+- o `fill` serve para você poder fazer a imagem preencher o tamanho inteiro da
+  div, e essa div precisa estar com tamanhos definidos (w-96 e h-56), além de 
+  position relative;
