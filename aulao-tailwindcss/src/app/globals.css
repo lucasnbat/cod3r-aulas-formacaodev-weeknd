@@ -1,0 +1,27 @@
+@tailwind base; /* zera o estilo padrão do browser (h1, h2, h3...) */
+@tailwind components; /* junção de classes para montar partes inteiras da app */
+@tailwind utilities; /* classes utilitárias (p-2, w-full...) */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+@layer components {
+  .botao {
+    @apply bg-blue-500 text-white;
+    @apply px-4 py-2 rounded;
+  }
+}
