@@ -29,5 +29,22 @@ export default function Home() {
     </div>
   )
 }
+```
 
+* Dá para criar até classes a mais dentro do mesmo componentes:
+```vim
+@layer components {
+  .botao {
+    @apply bg-blue-500 text-white;
+    @apply px-4 py-2 rounded;
+  }
+
+  .botao.vermelho {
+    @apply bg-red-500;
+  }
+}
+```
+* Usando:
+```vim
+    <button className="botao vermelho">Salvar</button>
 ```

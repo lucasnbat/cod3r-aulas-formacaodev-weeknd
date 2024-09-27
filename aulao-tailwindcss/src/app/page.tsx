@@ -5,7 +5,6 @@ export default function Home() {
     <div>
       <TemplatePagina>
         <h1>Inicio</h1>
-        <button className="botao">Salvar</button>
       </TemplatePagina>
     </div>
   )

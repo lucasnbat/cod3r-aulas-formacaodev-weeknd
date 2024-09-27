@@ -24,4 +24,14 @@ body {
     @apply bg-blue-500 text-white;
     @apply px-4 py-2 rounded;
   }
+
+  .botao.vermelho {
+    @apply bg-red-500;
+  }
+}
+
+@layer utilities {
+  .boxed {
+    @apply mx-auto max-w-7xl w-full;
+  }
 }
