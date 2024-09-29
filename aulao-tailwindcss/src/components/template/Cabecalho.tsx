@@ -1,11 +1,16 @@
+import Logo from "./Logo"
+import { MenuUsuario } from "./MenuUsuario"
 export interface CabecalhoProps {
   className?: string
 }
 
 export default function Cabecalho(props: CabecalhoProps) {
   return (
-    <header className={`bg-green-400 ${props.className ?? ""}`}>
-      Cabecalho
+    <header
+      className={`flex justify-between items-center px-7 border-b border-zinc-800 ${props.className ?? ""}`}
+    >
+      <Logo />
+      <MenuUsuario />
     </header>
   )
 }
