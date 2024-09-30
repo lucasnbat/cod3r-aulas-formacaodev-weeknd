@@ -14,7 +14,10 @@ export default function Menu(props: MenuProps) {
             label="introducing"
             href="/css-group-menu/introducing-css"
           />
-          <MenuItem label="advancing" href="/advancing" />
+          <MenuItem
+            label="advancing"
+            href="/css-group-menu/advancing-css/card-sample"
+          />
           <MenuItem label="finish" href="/finish" />
         </MenuGrupo>
         <MenuGrupo label="Grid">
