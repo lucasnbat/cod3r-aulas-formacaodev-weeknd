@@ -48,3 +48,5 @@ export default function Home() {
 ```vim
     <button className="botao vermelho">Salvar</button>
 ```
+* Breakpoints no tailwindcss:
+* ![alt text](image.png)

@@ -9,8 +9,10 @@ export default function Cabecalho(props: CabecalhoProps) {
     <header
       className={`flex justify-between items-center px-7 border-b border-zinc-800 ${props.className ?? ""}`}
     >
-      <Logo />
-      <MenuUsuario />
+      <div className="flex boxed justify-between items-center">
+        <Logo />
+        <MenuUsuario />
+      </div>
     </header>
   )
 }

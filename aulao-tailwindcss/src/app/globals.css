@@ -15,7 +15,8 @@
 
 @layer utilities {
   .boxed {
-    @apply mx-auto max-w-7xl w-full;
+    @apply mx-auto lg:max-w-5xl xl:max-w-7xl w-full;
+    @apply px-7 xl:px-0;
   }
 }
 
