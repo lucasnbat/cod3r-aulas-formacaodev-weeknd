@@ -3,10 +3,12 @@
 import { StyleSheet, Text, View } from "react-native";
 
 export default function Inicio() {
-  <View style={styles.container}>
-    <Text style={styles.titulo}>React Native</Text>
-    <Text style={styles.ajuda}>Use Drawer navigation para navegar</Text>
-  </View>;
+  return (
+    <View style={styles.container}>
+      <Text style={styles.titulo}>React Native</Text>
+      <Text style={styles.ajuda}>Use Drawer navigation para navegar</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
