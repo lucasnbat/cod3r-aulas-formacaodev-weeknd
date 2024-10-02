@@ -7,6 +7,9 @@ import Texto from "./Texto";
 import Imagem from "./Imagem";
 import Rolagem from "./Rolagem";
 import Botao from "./Botao";
+import Pressionavel from "./Pressionavel";
+import Entrada from "./Entrada";
+import Pilha from "../stack";
 
 export default function App() {
   const Drawer = createDrawerNavigator();
@@ -67,6 +70,24 @@ export default function App() {
           icone: "ellipse-outline",
           titulo: "Botao",
           componente: Botao,
+        })}
+        {tela({
+          nome: "Tela de pressable",
+          icone: "hand-right-outline",
+          titulo: "Pressable",
+          componente: Pressionavel,
+        })}
+        {tela({
+          nome: "Tela de entrada",
+          icone: "code-download-outline",
+          titulo: "Entrada",
+          componente: Entrada,
+        })}
+        {tela({
+          nome: "Tela de pilha",
+          icone: "layers-outline",
+          titulo: "Pilha/ Stack de páginas",
+          componente: Pilha,
         })}
       </Drawer.Navigator>
     </NavigationContainer>
