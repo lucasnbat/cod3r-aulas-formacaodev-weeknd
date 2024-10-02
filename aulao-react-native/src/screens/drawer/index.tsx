@@ -3,6 +3,10 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import Inicio from "./Inicio";
+import Texto from "./Texto";
+import Imagem from "./Imagem";
+import Rolagem from "./Rolagem";
+import Botao from "./Botao";
 
 export default function App() {
   const Drawer = createDrawerNavigator();
@@ -39,6 +43,30 @@ export default function App() {
           icone: "home-outline",
           titulo: "Título de início",
           componente: Inicio,
+        })}
+        {tela({
+          nome: "Tela de Texto",
+          icone: "text-outline",
+          titulo: "Título de texto",
+          componente: Texto,
+        })}
+        {tela({
+          nome: "Tela de imagem",
+          icone: "image-outline",
+          titulo: "Imagem",
+          componente: Imagem,
+        })}
+        {tela({
+          nome: "Tela de scroll",
+          icone: "list-outline",
+          titulo: "Scroll",
+          componente: Rolagem,
+        })}
+        {tela({
+          nome: "Tela de botao",
+          icone: "ellipse-outline",
+          titulo: "Botao",
+          componente: Botao,
         })}
       </Drawer.Navigator>
     </NavigationContainer>

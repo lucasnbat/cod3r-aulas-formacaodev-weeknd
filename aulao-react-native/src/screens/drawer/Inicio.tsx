@@ -1,10 +1,11 @@
 // tela padrão que vai aparecer
 
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 
 export default function Inicio() {
   return (
     <View style={styles.container}>
+      <Image source={require("../../../assets/images/react-logo.png")} />
       <Text style={styles.titulo}>React Native</Text>
       <Text style={styles.ajuda}>Use Drawer navigation para navegar</Text>
     </View>
@@ -26,5 +27,9 @@ const styles = StyleSheet.create({
     color: "#000",
     textAlign: "center",
     paddingHorizontal: 30,
+  },
+  imagem: {
+    width: 200,
+    height: 200,
   },
 });

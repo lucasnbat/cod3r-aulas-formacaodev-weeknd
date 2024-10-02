@@ -19,3 +19,16 @@
      "version": "1.0.0",
   ```
 * Só coloca texto dentro da tag `<Text></Text>`
+
+# Como faço para rodar um dispositivo mobile no computador?
+
+* Instale o android studio;
+* Vá em Virtual Device Manager;
+* Crie um dispositivo virtual novo;
+* Deixe rodando;
+* Vai no projeto e:
+  ```bash
+  npm install -g expo-cli
+
+  npx expo start
+  ```
