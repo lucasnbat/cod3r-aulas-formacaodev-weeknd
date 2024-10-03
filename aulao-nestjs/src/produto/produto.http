@@ -1,5 +1,26 @@
 GET http://localhost:3333/produtos/ping
-
 ###
-
 GET http://localhost:3333/produtos
+###
+GET http://localhost:3333/produtos/1
+###
+POST http://localhost:3333/produtos
+Content-Type: application/json
+
+{
+    "id": 4,
+    "nome": "Teclado Mecânico Redragon Kumara",
+    "preco": 299.90,
+    "descricao": "Teclado muito bom confia",
+    "imagemUrl": ""
+}
+###
+PATCH http://localhost:3333/produtos
+Content-Type: application/json
+
+{
+    "id": 4,
+    "descricao":"Teclado bomzaço confia risos risos"
+}
+###
+DELETE http://localhost:3333/produtos/2
