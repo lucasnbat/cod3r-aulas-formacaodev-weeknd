@@ -18,6 +18,39 @@
   ```powershell
   nest g co produto --flat --no-spec
   ```
-## Controller
+## Config module (p/ acessar var ambiente)
 
-* 
+* Offtopic: instalação do redis (banco de dados chave/valor):
+  ```powershell
+  npm i redis
+  npm i ioredis
+  ```
+
+```powershell
+ npm i @nestjs/config
+```
+
+* Adicione o `ConfigModule.forRoot()` no `app.module.ts`:
+  ```vim
+  @Module({
+    imports: [ProdutoModule, ConfigModule.forRoot()],
+    controllers: [],
+    providers: [],
+  })
+  ```
+* depois, crie um `.env` com as variáveis lá na raiz do projeto:
+  ```vim
+  REDIS_HOST=localhost
+  REDIS_PORT=6379
+  ```
+## Configurando redis
+
+* Tenha o `.env` conforme o tópico anterior;
+* no terminal:
+  ```powershell
+  nest g mo db
+  ```
+* dentro da pasta `/src/db` execute:
+  ```powershell
+  PS C:\Users\lucas\OneDrive\Documentos\CursoWeb\Aulas\Cod3r\aulao-nestjs\src\db> nest g pr cache --flat --no-spec
+  ```
