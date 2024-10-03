@@ -1,11 +1,15 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { CacheProvider } from 'src/db/cache.provider';
 import Usuario from './usuario.entity';
+import { IdService } from 'src/db/id.service';
 
 @Controller('usuarios')
 export class UsuarioController {
     // injeta dependencia do CacheProvider (nosso banco)
-    constructor(private readonly cache: CacheProvider) { }
+    constructor(
+        private readonly cache: CacheProvider,
+        private readonly idService: IdService
+    ) { }
 
     @Get()
     async obterTodos() {
@@ -14,6 +18,7 @@ export class UsuarioController {
 
     @Post()
     async salvar(@Body() usuario: Usuario): Promise<void> {
-        return this.cache.salvar('usuario', usuario.id, { ...usuario, id: Math.random() })
+        const id = await this.idService.gerarId();
+        return this.cache.salvarPorId('usuario', id, { ...usuario, id })
     }
 }

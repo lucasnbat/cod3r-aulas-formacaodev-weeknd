@@ -13,13 +13,22 @@ export class CacheProvider implements OnModuleDestroy {
         })
     }
 
-    async salvar(tipo: string, id: number, valor: any): Promise<void> {
+    async salvarPorId(tipo: string, id: number, valor: any): Promise<void> {
         await this.db.set(`${tipo}:${id}`, JSON.stringify(valor))
         await this.atualizarIds(tipo, id)
     }
 
-    async obter(tipo: string, id: number): Promise<any> {
+    async salvar(chave: string, valor: any): Promise<void> {
+        await this.db.set(chave, JSON.stringify(valor))
+    }
+
+    async obterPorId(tipo: string, id: number): Promise<any> {
         const valor = await this.db.get(`${tipo}:${id}`)
+        return JSON.parse(valor)
+    }
+
+    async obter(chave: string): Promise<any> {
+        const valor = await this.db.get(chave)
         return JSON.parse(valor)
     }
 
@@ -29,7 +38,7 @@ export class CacheProvider implements OnModuleDestroy {
 
         const valores = await Promise.all(
             idsArray.map(async (id: number) => {
-                const valor = await this.obter(tipo, id)
+                const valor = await this.obterPorId(tipo, id)
                 return valor;
             })
         )

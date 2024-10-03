@@ -54,3 +54,13 @@
   ```powershell
   PS C:\Users\lucas\OneDrive\Documentos\CursoWeb\Aulas\Cod3r\aulao-nestjs\src\db> nest g pr cache --flat --no-spec
   ```
+## Criação de arquivos com `nest g`
+
+  ```powershell
+  nest g s --flat --no-spec # service
+  nest g mo --flat --no-spec # modulo
+  nest g pr --flat --no-spec # provider (injetable)
+  nest g co --flat --no-spec # controller
+  ```
+* `--flat` faz criar na mesma pasta e `--no-spec` faz gerar sem arquivos de 
+  testes;
